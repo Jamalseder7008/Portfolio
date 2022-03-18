@@ -13,6 +13,7 @@
     </head>
     <body  class="bg-dark text-light">
         <!--Navbar-->
+        
         <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
             <a class="navbar-brand" href="index.html">
             <i class="bi bi-house"></i> Jamal Seder
@@ -47,34 +48,32 @@
             </div>
         </nav>
         <!--Contact Form-->
-        <div class="container mt-4">
+        <div class="container mt-4" id="contact-form">
             <h1 class="display-1">
                 <i class="bi bi-envelope"></i> Contact
             </h1>
             <hr>
-            <form action="mailto:jamalseder@gmail.com" method="post" enctype="text/plain">
+           
                 <div class="form-group mb-3">
                     <label>Name:</label>
-                    <input class="form-control" type="text" id="name" placeholder="Name">
+                    <input class="form-control" type="text" id="Name" placeholder="Name">
                 </div>
                 <div class="form-group mb-3">
                     <label>Email:</label>
-                    <input class="form-control" type="email" id="email" placeholder="Email">
-                </div>
-                <div class="form-group mb-3">
-                    <label>Subject:</label>
-                    <input class="form-control" type="subject" id="subject" placeholder="Subject">
+                    <input class="form-control" type="email" id="Email" placeholder="Email">
                 </div>
                 <div class="form-group mb-3">
                     <label>Message:</label>
-                    <textarea class="form-control" rows="4" id="message" placeholder="Message"> </textarea>
+                    <textarea class="form-control" rows="4" id="Message" placeholder="Message"> </textarea>
                 </div>
-                <button n class='btn btn-primary float-end' type="submit" value="Send"> Submit </button>
-            </form>
+                <button n class='btn btn-primary float-end' id="submit"> Submit </button>
+            
         </div>
         <!-- Bootstrap Bundle with Popper -->
         <script src="scripts/bootstrap.bundle.min.js"></script>
-        </body>
+        <script src="scripts/model.js"></script>
+        <script src="scripts/controller.js"></script>
+    </body>
         
 
 </html>
