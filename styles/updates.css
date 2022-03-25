@@ -9,3 +9,8 @@
 .tab {
     text-indent: 50px;
 }
+
+.img-smaller {
+    max-width: 40%;
+    max-height: 200px
+}
