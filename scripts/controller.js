@@ -14,4 +14,9 @@ const submitEvent = function(){
     postToGoogleDB(formData);
 }
 
+function showChoice(item) {
+    document.getElementById("dropdownMenu1").innerHTML = item.innerHTML;
+}
+
+
 initControllers();

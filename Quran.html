@@ -1,0 +1,137 @@
+<html>
+    <head>
+
+<!--Resources-->
+<!--
+    https://www.w3schools.com/bootstrap5/bootstrap_form_select.php
+    https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_form_select&stacked=h
+
+
+
+-->
+
+        <link rel="icon" href="assets/JamalProfilePic.jpg">
+        <title>Quran Class</title>
+        
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="styles/updates.css">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="scripts/controller.js"></script>
+    </head>
+    <body  class="bg-dark text-light">
+        <!--Navbar-->
+        
+        <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+            <a class="navbar-brand" href="index.html">
+            <i class="bi bi-house"></i> Quran Class
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+                <i class="navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-options">
+            
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                        <i class="bi bi-code-slash"></i> Code
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">
+                        <i class="bi bi-chat-dots"></i> Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                        <i class="bi bi-person"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                        <i class="bi bi-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Contact Form-->
+        <div class="container mt-4" id="contact-form">
+            <h1 class="display-1">
+                <i class="bi bi-envelope"></i> Contact
+            </h1>
+            <hr>
+                <div class="form-group mb-3">
+                    <label>Teacher:</label>
+                    <select class="form-select" id="Teacher" name="TeacherNames">
+                        <option>Please Select a Teacher</option>
+                        <option>Sheikh Mubarak</option>
+                        <option>Sheikh Mustafa</option>
+                        <option>Sheikha Muna</option>
+                        <option>Sheikh Yasser</option>
+                    </select>
+                </div>
+
+                    <!-- <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="Teacher">Teacher</button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#" onclick="showChoice(this)">Sheikh Mubarak</a></li>
+                            <li><a href="#" onclick="showChoice(this)">Sheikh Mustafa</a></li>
+                            <li><a href="#" onclick="showChoice(this)">Sheikha Muna</a></li>
+                            <li><a href="#" onclick="showChoice(this)">Sheikh Yasser</a></li>
+                        </ul>
+                    </div> -->
+
+                <div class="form-group mb-3">
+                    <label>Student:</label>
+                    <input class="form-control" type="name" id="Email" placeholder="Email">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Surah Memorization:</label>
+                    <select class="form-select" id="Teacher" name="TeacherNames">
+                        <option>Please Select a Surah</option>
+                        <option>الناس</option>
+                        <option>الفلق</option>
+                        <option>الإخلاص</option>
+                        <option>An-Nas</option>
+                    </select>
+                    
+                    <!-- <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="Surah">Surah</button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#" onclick="showChoice(this)">الناس</a></li>
+                            <li><a href="#" onclick="showChoice(this)">الفلق</a></li>
+                            <li><a href="#" onclick="showChoice(this)">الإخلاص</a></li>
+                            <li><a href="#" onclick="showChoice(this)">An-Nas</a></li>
+                        </ul>
+                    </div> -->
+                
+                </div>
+                <div class="form-group mb-3">
+                    <label>Student:</label>
+                    <input class="form-control" type="email" id="Email" placeholder="Email">
+                </div>
+                <div class="form-group mb-3">
+                    <label>Message:</label>
+                    <textarea class="form-control" rows="4" id="Message" placeholder="Message"> </textarea>
+                </div>
+                <button n class='btn btn-primary float-end' id="submit"> Submit </button>
+            
+        </div>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="scripts/bootstrap.bundle.min.js"></script>
+        <script src="scripts/model.js"></script>
+        <script src="scripts/controller.js"></script>
+    </body>
+        
+
+</html>

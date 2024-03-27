@@ -14,3 +14,20 @@
     max-width: 40%;
     max-height: 200px
 }
+
+div {
+    
+  
+  
+  .div1 {
+    background: red;
+  }
+  
+  .div2 {
+    background: yellow;
+  }
+  
+  .div3 {
+    background: green;
+  }
+}
