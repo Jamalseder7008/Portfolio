@@ -1,79 +1,194 @@
-<html>
-    <head>
-        <link rel="icon" href="assets/JamalProfilePic.jpg">
-        <title>Jamal Seder</title>
-        
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="styles/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/bootstrap-icons.css">
-    </head>
-    <body  class="bg-dark text-light">
-        <!--Navbar-->
-        
-        <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="index.html">
-            <i class="bi bi-house"></i> Jamal Seder
-            </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-options">
-            
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
-                        <i class="bi bi-code-slash"></i> Code
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">
-                        <i class="bi bi-chat-dots"></i> Blog
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                        <i class="bi bi-person"></i> About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                        <i class="bi bi-envelope"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!--Contact Form-->
-        <div class="container mt-4" id="contact-form">
-            <h1 class="display-1">
-                <i class="bi bi-envelope"></i> Contact
-            </h1>
-            <hr>
-           
-                <div class="form-group mb-3">
-                    <label>Name:</label>
-                    <input class="form-control" type="text" id="Name" placeholder="Name">
-                </div>
-                <div class="form-group mb-3">
-                    <label>Email:</label>
-                    <input class="form-control" type="email" id="Email" placeholder="Email">
-                </div>
-                <div class="form-group mb-3">
-                    <label>Message:</label>
-                    <textarea class="form-control" rows="4" id="Message" placeholder="Message"> </textarea>
-                </div>
-                <button n class='btn btn-primary float-end' id="submit"> Submit </button>
-            
-        </div>
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="scripts/bootstrap.bundle.min.js"></script>
-        <script src="scripts/model.js"></script>
-        <script src="scripts/controller.js"></script>
-    </body>
-        
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/Profilepic.jpg">
+  <title>Contact — Jamal Seder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Jamal Seder for tech projects, teaching, or hijama inquiries.">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/bootstrap-icons.css">
+</head>
+<body class="bg-white text-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-house"></i> Jamal Seder</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+      <i class="navbar-toggler-icon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-options">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-code-slash"></i> Code</a></li>
+            <li class="nav-item"><a class="nav-link" href="teaching.html"><i class="bi bi-journal-bookmark"></i> Teaching</a></li>
+            <li class="nav-item"><a class="nav-link active" href="hijama.html"><i class="bi bi-heart"></i> Hijama</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-chat-dots"></i> Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+  </nav>
 
+  <!-- Contact -->
+  <main class="container py-4">
+    <header class="mb-3">
+      <h1 class="display-5"><i class="bi bi-envelope"></i> Contact</h1>
+      <p class="lead mb-1">Reach out for tech projects, teaching, speaking, or hijama appointments.</p>
+      <hr>
+    </header>
+
+    <section class="row g-3">
+      <div class="col-lg-7">
+        <div class="card bg-dark text-light">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-chat-dots"></i> Send a Message</h5>
+
+            <!-- Alerts -->
+            <div id="alert-success" class="alert alert-success d-none" role="alert">
+              ✅ Message sent! I’ll get back to you soon in shā’ Allāh.
+            </div>
+            <div id="alert-error" class="alert alert-danger d-none" role="alert">
+              ❌ Something went wrong. Please try again or email me directly.
+            </div>
+
+            <!-- Form -->
+            <form id="contactForm" novalidate>
+              <!-- Honeypot -->
+              <input type="text" class="d-none" id="website" name="website" tabindex="-1" autocomplete="off">
+
+              <div class="mb-3">
+                <label for="Name" class="form-label">Name <span class="text-warning">*</span></label>
+                <input class="form-control" type="text" id="Name" name="Name" placeholder="Your name" required minlength="2" maxlength="80">
+                <div class="invalid-feedback">Please enter your name (2–80 chars).</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="Email" class="form-label">Email <span class="text-warning">*</span></label>
+                <input class="form-control" type="email" id="Email" name="Email" placeholder="you@example.com" required maxlength="120">
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="Message" class="form-label">Message <span class="text-warning">*</span></label>
+                <textarea class="form-control" rows="5" id="Message" name="Message" placeholder="How can I help?" required minlength="5" maxlength="2000"></textarea>
+                <div class="invalid-feedback">Please enter a brief message.</div>
+              </div>
+
+              <div class="d-flex justify-content-end align-items-center gap-2">
+                <a href="mailto:jamal@example.com" class="btn btn-outline-light btn-sm" id="mailto-link">
+                  <i class="bi bi-envelope-open"></i> Email Instead
+                </a>
+                <button type="submit" class="btn btn-success" id="submitBtn">
+                  <span class="spinner-border spinner-border-sm me-1 d-none" id="submitSpinner" aria-hidden="true"></span>
+                  Submit
+                </button>
+              </div>
+
+              <p class="small text-muted mt-2 mb-0">
+                This form posts to Google Forms. Your email is used only to respond to your message.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card bg-dark text-light h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-telephone"></i> Other Ways to Reach Me</h5>
+            <ul class="list-unstyled mb-3">
+              <li class="mb-1"><i class="bi bi-geo-alt"></i> New Orleans, LA</li>
+              <li class="mb-1"><i class="bi bi-envelope-at"></i> <a class="link-light text-decoration-underline" href="mailto:jamalseder@gmail.com">jamalseder@gmail.com</a></li>
+              <li class="mb-1"><i class="bi bi-envelope-at"></i> <a class="link-light text-decoration-underline" href="tel:+15043390011">+1(504) 339-0011</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+              <a href="https://www.instagram.com/hijamabyjamal/" target="_blank" class="text-light fs-3"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61577323511539" target="_blank" class="text-light fs-3"><i class="bi bi-facebook"></i></a>
+            </div>
+            <hr>
+            <p class="small mb-0">For hijama bookings, please mention preferred days/times. For tech, include a brief of your stack/problem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+
+  <!-- Inline JS: Google Forms submit with UX polish -->
+  <script>
+    // === CONFIG: your Google Form IDs ===
+    const formId = "1FAIpQLSc22cci7BRvgsamsyxqbG52hoye-68sIU3g-79PwEW8V-1QeA";
+    const entry1 = "entry.1599892893"; // Name
+    const entry2 = "entry.1246358072"; // Email
+    const entry3 = "entry.1195131859"; // Message
+
+    const getPath = id => `https://docs.google.com/forms/d/e/${id}/formResponse`;
+
+    // Helpers
+    const qs = sel => document.querySelector(sel);
+    const show = (el) => el.classList.remove("d-none");
+    const hide = (el) => el.classList.add("d-none");
+
+    // Email fallback gets value from form when clicked
+    (function initMailto() {
+      const mailto = qs("#mailto-link");
+      mailto.addEventListener("click", (e) => {
+        const name = encodeURIComponent(qs("#Name").value || "");
+        const email = encodeURIComponent(qs("#Email").value || "");
+        const msg = encodeURIComponent(qs("#Message").value || "");
+        const to = "jamal@example.com"; // <-- replace with your real email
+        const subj = `Website inquiry from ${qs("#Name").value || "visitor"}`;
+        const body = `Name: ${decodeURIComponent(name)}%0AEmail: ${decodeURIComponent(email)}%0A%0A${decodeURIComponent(msg)}`;
+        mailto.href = `mailto:${to}?subject=${encodeURIComponent(subj)}&body=${body}`;
+      });
+    })();
+
+    // Form validation + submit
+    (function initForm() {
+      const form = qs("#contactForm");
+      const btn = qs("#submitBtn");
+      const spinner = qs("#submitSpinner");
+      const alertOk = qs("#alert-success");
+      const alertErr = qs("#alert-error");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        hide(alertOk); hide(alertErr);
+
+        // Honeypot (bots often fill hidden fields)
+        if (qs("#website").value) { show(alertOk); form.reset(); return; }
+
+        // HTML5 validation
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          return;
+        }
+
+        // Build Google Forms URL with entries
+        const data = {};
+        data[entry1] = qs("#Name").value.trim();
+        data[entry2] = qs("#Email").value.trim();
+        data[entry3] = qs("#Message").value.trim();
+
+        const url = new URL(getPath(formId));
+        Object.entries(data).forEach(([k, v]) => url.searchParams.set(k, v));
+
+        // UX: disable + spinner
+        btn.disabled = true; show(spinner);
+
+        try {
+          // no-cors = opaque response, we can't read success/fail, so we optimistically show success
+          await fetch(url, { method: "POST", mode: "no-cors" });
+          show(alertOk);
+          form.reset();
+          form.classList.remove("was-validated");
+        } catch (err) {
+          console.error(err);
+          show(alertErr);
+        } finally {
+          btn.disabled = false; hide(spinner);
+        }
+      });
+    })();
+  </script>
+</body>
 </html>

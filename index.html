@@ -1,42 +1,84 @@
 <html>
     <head>
-        <link rel="icon" href="assets/JamalProfilePic.jpg">
+        <link rel="icon" href="assets/Profilepic.jpg">
         <title>Jamal Seder</title>
         
+        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!--Bootstrap CSS-->
+        
+        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/bootstrap-icons.css">
-
     </head>
-    <body>
-        
-        <!--Background Image-->
-        <img class="position-absolute w-100 h-100" src='assets/clouds.gif'>
-        <!--Landing Page-->
-        <div class="position-relative text-white container text-center h-100 d-flex flex-column justify-content-center">
-            <h1 class="display-4">  Salaam  </h1>
-            <h2> <Strong> Jamal Seder </Strong> </h2>
-            <div>
-                <br>
-                <button class="btn btn-outline-light" type="button" onclick="document.location='projects.html'">
-                    <i class="bi bi-code-slash"></i> Code
+        <body class='white text-dark'>
+            <!-- Navbar-->
+            <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+                <a class="navbar-brand" href="index.html">
+                <i class="bi bi-house"></i> Jamal Seder
+                </a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+                    <i class="navbar-toggler-icon"></i>
                 </button>
-                <button class="btn btn-outline-light" type="button" onclick="document.location='blog.html'">
-                    <i class="bi bi-chat-dots"></i> Blog
-                </button>
-                <button class="btn btn-outline-light" type="button" onclick="document.location='about.html'">
-                    <i class="bi bi-person"></i> About
-                </button>
-                <button class="btn btn-outline-light" type="button" onclick="document.location='contact.html'">
-                    <i class="bi bi-envelope"></i> Contact
-                </button>
+                <div class="collapse navbar-collapse" id="navbar-options">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-code-slash"></i> Code</a></li>
+                      <li class="nav-item"><a class="nav-link" href="teaching.html"><i class="bi bi-journal-bookmark"></i> Teaching</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="hijama.html"><i class="bi bi-heart"></i> Hijama</a></li>
+                      <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-chat-dots"></i> Blog</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--'About' Heading -->
+            <div class='container'>
+                <h1 class='display-1 mt-4'>
+                    <i class="bi bi-person"></i> Who Am I?
+                </h1>
+                <hr>
             </div>
-        </div>
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="scripts/bootstrap.bundle.min.js"></script>
+            
+            <!-- About Me: using Grid & Flex -->
+            <div class='container-fluid text-light row'>
+                <!-- Column 1: Social links & Education -->
+                <div class="text-center col-md-2">
+                    <h4 class="lead"> Jamal Seder </h4>
+                    <img class='img-thumbnail rounded-circle w-50' src="assets/Profilepic.jpg">
+                    <div class="d-flex justify-content-center gap-4 m-4">
+                        <a href='https://www.linkedin.com/in/jamal-seder-9849ba1b2/' target="_blank" class='text-dark'> <i class="bi bi-linkedin"></i> </a>
+                        <a href='https://www.github.com/jamalseder7008' target="_blank" class='text-dark'> <i class="bi bi-github"></i> </a>
+                    </div>
+                    <hr>
+                    <div class="d-flex row row-cols-1 flex-wrap text-dark">
+                        <span> Education: <span>
+                        <small> Computer Science, B.S. </small>
+                        <small  class="fst-italic"> University of New Orleans </small>
+                    </div>
+                    <hr>
+                </div>
+                <!-- Column 2: Name & Skills -->
+                <div class='bg-dark  col-md-10'>
+                    <div class="row">
+                        <div class="col-md-8 col-12">
+                            <h1>Jamal Seder</h1>
+                            <p> 
+                                &ensp;Knowledge is a passion of those that love to learn. I spend much of my time educating my community about the Islamic religion by teaching the Quran and the Sunnah.
+                                <br/> <br/> &ensp;I also took the time to learn the art of Hijama (Blood Cupping).
+                                <br/> <br/>  &ensp;Besides that I also have experience in the field of computer science with studies in programming languages(Java, JavaScript, Python) and web development but lately I have expanded to include cloud computing (AWS). 
+                                I build cloud servers for businesses and help connect them to their workstations to make the work flow more efficient. 
+                            </p>
+                        </div>
+                        
+                        <div class='col-md-4 d-md-block d-none'>
+                            <img class='img-fluid' src='assets/Profilepic.jpg' >
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
 
-    </body>
+            <!-- Bootstrap Bundle with Popper -->
+            <script src="scripts/bootstrap.bundle.min.js"></script>
+        </body>
+            
 </html>
