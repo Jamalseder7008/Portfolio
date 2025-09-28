@@ -1,119 +1,172 @@
-<html>
-    <head>
-        <link rel="icon" href="assets/Profilepic.jpg">
-        <title>Jamal Seder</title>
-        
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="styles/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/bootstrap-icons.css">
-        </head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/Profilepic.jpg">
+  <title>Blog — Jamal Seder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Essays and notes by Jamal Seder on technology, education, and faith.">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/bootstrap-icons.css">
+  <style>
+    /* Optional: subtle caption backdrop for legibility */
+    .carousel-caption{
+      background: rgba(0,0,0,.45);
+      border-radius: .5rem;
+      padding: .75rem 1rem;
+    }
+    /* Make carousel images uniform height on larger screens */
+    .blog-hero {
+      max-height: 420px; object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-white text-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-house"></i> Jamal Seder</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+      <i class="navbar-toggler-icon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-options">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-code-slash"></i> Code</a></li>
+            <li class="nav-item"><a class="nav-link" href="teaching.html"><i class="bi bi-journal-bookmark"></i> Teaching</a></li>
+            <li class="nav-item"><a class="nav-link active" href="hijama.html"><i class="bi bi-heart"></i> Hijama</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-chat-dots"></i> Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+  </nav>
 
-    <body class="bg-dark text-light">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="index.html">
-            <i class="bi bi-house"></i> Jamal Seder
-            </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-options">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-code-slash"></i> Code</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teaching.html"><i class="bi bi-journal-bookmark"></i> Teaching</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="hijama.html"><i class="bi bi-heart"></i> Hijama</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-chat-dots"></i> Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--Blog page-->
-        <div class="container mt-4">
-            <h1>
-                <i class="bi bi-chat-dots"></i> Blog
-            </h1>
-            <hr>
+  <!-- Header -->
+  <main class="container py-4">
+    <header class="mb-3">
+      <h1 class="display-5"><i class="bi bi-chat-dots"></i> Blog</h1>
+      <p class="lead mb-1">Essays and notes on technology, education, and faith.</p>
+      <hr>
+    </header>
+
+    <!-- Carousel -->
+    <div id="blog-carousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="5000" aria-label="Featured posts">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#blog-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#blog-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#blog-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#blog-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#blog-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner text-center">
+        <!-- Slide 1 (active) -->
+        <div class="carousel-item active">
+          <img class="blog-hero" src="assets/TimeAndSpace.jpg" alt="Abstract image for The Path article">
+          <div class="carousel-caption">
+            <h5 class="mb-1">The Path</h5>
+            <p class="mb-2">“Guide us onto the straight path.” Reflections on intention and direction.</p>
+            <a class="btn btn-success btn-sm" href="articles/article-01.html">Read More</a>
+          </div>
         </div>
-        <!--Carousel -->
-        <div id="blog-carousel"  class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <!-- Carousel Menu -->
-            <ol class="carousel-indicators">
-                <li data-bs-target="#blog-carousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#blog-carousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#blog-carousel" data-bs-slide-to="2"></li>
-                <li data-bs-target="#blog-carousel" data-bs-slide-to="3"></li>
-                <li data-bs-target="#blog-carousel" data-bs-slide-to="4"></li>
 
-            </ol>
-            <!-- Carousel Body -->
-            <div class="carousel-inner text-center">
-                
-                <!-- Slide 0 -->
-                <div id="slide-0"  class="carousel-item">
-                    <img class="img-fluid" width="600" height="300" src="assets/KnowledgeOfTheHeart.jpg">
-                    <div class="carousel-caption">
-                        <h5>Knowledge Of the Heart</h5>
-                        <p> A description of an Islamic Heart </p>
-                        <button window.open('https://docs.google.com/document/d/193u2Ai75UzM88xVLgnpNmpjKuM3f3a4MbjwG3qW706k/edit#heading=h.z4bai1lnr9gq')>Read More</button>
-                    </div>
-                </div>
-
-                <!-- Slide 1 -->
-                <div id="slide-1" class="carousel-item active">
-                    <img class="img-fluid" src="assets/TimeAndSpace.jpg">
-                    <div class="carousel-caption">
-                        <h5> The Path </h5>
-                        <p> Guide us onto the straight path. </p>
-                        <button onclick="document.location='articles/article-01.html'"> Read More </button>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div id="slide-2"  class="carousel-item">
-                    <img class="img-fluid" width="600" height="300" src="assets/pvsnp.jpg">
-                    <div class="carousel-caption">
-                        <h5>P vs NP</h5>
-                        <p> Analysis of the NP problem </p>
-                        <button onclick="document.location='articles/article-02.html'">Read More</button>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div id="slide-3"  class="carousel-item">
-                    <img class="img-fluid" width="600" height="300" src="assets/Audit-scheduler.png">
-                    <div class="carousel-caption">
-                        <h5 class="text-dark">Audit Scheduler</h5>
-                        <p class="text-dark"> Constraint Satisfaction Problem </p>
-                        <button onclick="document.location='articles/article-03.html'">Read More</button>
-                    </div>
-                </div>
-                 <!-- Slide 4 -->
-                <div id="slide-4"  class="carousel-item">
-                    <img class="img-fluid" width="600" height="300" src="assets/TechnologyEssay.png">
-                    <div class="carousel-caption">
-                        <h5>The Purpose of using technology</h5>
-                        <p>  </p>
-                        <button onclick="document.location='articles/article-04.html'">Read More</button>
-                    </div>
-                </div>
-
-
-
-                
-            </div>
-            <!-- Carousel Controls -->
-            <a class="carousel-control-prev" href="#blog-carousel" role="button" data-bs-slide="prev">
-                <i class="carousel-control-prev-icon"></i>
-            </a>
-            <a class="carousel-control-next" href="#blog-carousel" role="button" data-bs-slide="next">
-                <i class="carousel-control-next-icon"></i>
-            </a>
-    
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img class="blog-hero" src="assets/HeartPurification.jpg" alt="Book and heart illustration for Knowledge of the Heart">
+          <div class="carousel-caption">
+            <h5 class="mb-1">Knowledge of the Heart</h5>
+            <p class="mb-2">A brief on cultivating an Islamic understanding of the qalb (heart).</p>
+            <a class="btn btn-success btn-sm" href="https://docs.google.com/document/d/193u2Ai75UzM88xVLgnpNmpjKuM3f3a4MbjwG3qW706k/edit#heading=h.z4bai1lnr9gq" target="_blank" rel="noopener">Read More</a>
+          </div>
         </div>
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="scripts/bootstrap.bundle.min.js"></script>
-    </body>
 
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img class="blog-hero" src="assets/pvsnp.jpg" alt="Computer science graphic for P vs NP essay">
+          <div class="carousel-caption">
+            <h5 class="mb-1">P vs NP</h5>
+            <p class="mb-2">A concise walkthrough of the NP problem landscape.</p>
+            <a class="btn btn-success btn-sm" href="articles/article-02.html">Read More</a>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <img class="blog-hero" src="assets/Audit-scheduler.png" alt="Constraint network diagram for Audit Scheduler writeup">
+          <div class="carousel-caption">
+            <h5 class="mb-1">Audit Scheduler</h5>
+            <p class="mb-2">A constraint satisfaction approach to scheduling audits.</p>
+            <a class="btn btn-success btn-sm" href="articles/article-03.html">Read More</a>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+          <img class="blog-hero" src="assets/TechnologyEssay.png" alt="Laptop and notes for Technology Purpose essay">
+          <div class="carousel-caption">
+            <h5 class="mb-1">The Purpose of Using Technology</h5>
+            <p class="mb-2">What tech is for—and what it isn’t—in classrooms and communities.</p>
+            <a class="btn btn-success btn-sm" href="articles/article-04.html">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#blog-carousel" data-bs-slide="prev" aria-label="Previous">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#blog-carousel" data-bs-slide="next" aria-label="Next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Recent Posts (cards that match your style) -->
+    <section>
+      <h2 class="h4 mb-3"><i class="bi bi-journal-text"></i> Recent Posts</h2>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light h-100">
+            <img src="assets/TimeAndSpace.jpg" class="card-img-top" alt="The Path thumbnail" style="object-fit:cover; max-height:170px;">
+            <div class="card-body">
+              <h5 class="card-title">The Path</h5>
+              <p class="card-text small">On staying oriented toward what pleases Allah in a distracted world.</p>
+              <a href="articles/article-01.html" class="btn btn-success btn-sm">Read</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light h-100">
+            <img src="assets/HeartPurification.jpg" class="card-img-top" alt="Knowledge of the Heart thumbnail" style="object-fit:cover; max-height:170px;">
+            <div class="card-body">
+              <h5 class="card-title">Knowledge of the Heart</h5>
+              <p class="card-text small">Short notes on purifying intention and cultivating ihsan.</p>
+              <a href="https://docs.google.com/document/d/193u2Ai75UzM88xVLgnpNmpjKuM3f3a4MbjwG3qW706k/edit#heading=h.z4bai1lnr9gq" class="btn btn-success btn-sm" target="_blank" rel="noopener">Read</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light h-100">
+            <img src="assets/pvsnp.jpg" class="card-img-top" alt="P vs NP thumbnail" style="object-fit:cover; max-height:170px;">
+            <div class="card-body">
+              <h5 class="card-title">P vs NP</h5>
+              <p class="card-text small">A quick primer on complexity’s most famous open problem.</p>
+              <a href="articles/article-02.html" class="btn btn-success btn-sm">Read</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- (Optional) Social row to match other pages -->
+    <section class="mt-4">
+      <div class="text-center">
+        <a href="https://www.instagram.com/hijamabyjamal/" target="_blank" class="text-dark me-3 fs-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61577323511539" target="_blank" class="text-dark fs-3"><i class="bi bi-facebook"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+</body>
 </html>

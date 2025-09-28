@@ -1,85 +1,111 @@
-<html>
-    <head>
-        <link rel="icon" href="../assets/JamalProfilePic.jpg">
-        <title>Jamal Seder</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/JamalProfilePic.jpg">
+  <title>P vs NP — Jamal Seder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A brief reflection on P vs NP, verification vs solution, and humility before the unknown.">
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/bootstrap-icons.css">
+  <link rel="stylesheet" href="../styles/updates.css">
+  <style>
+    .post-hero{max-height:360px; object-fit:cover; width:100%;}
+    .post-meta{font-size:.9rem;}
+    .dropcap:first-letter{float:left; font-size:3.2rem; line-height:1; padding-right:.35rem; margin-top:.2rem; font-weight:700;}
+  </style>
+</head>
+<body class="bg-white text-dark">
+  <!-- Navbar (relative links for /articles/) -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+    <a class="navbar-brand" href="../index.html"><i class="bi bi-house"></i> Jamal Seder</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-options">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../projects.html"><i class="bi bi-code-slash"></i> Code</a></li>
+        <li class="nav-item"><a class="nav-link" href="../teaching.html"><i class="bi bi-journal-bookmark"></i> Teaching</a></li>
+        <li class="nav-item"><a class="nav-link" href="../hijama.html"><i class="bi bi-heart"></i> Hijama</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../blog.html"><i class="bi bi-chat-dots"></i> Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../styles/bootstrap.min.css">
-        <link rel="stylesheet" href="../styles/bootstrap-icons.css">
-        <link rel="stylesheet" href="../styles/updates.css">
-    </head>
-    <body class="bg-dark text-light">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="index.html">
-            <i class="bi bi-house"></i> Jamal Seder
+  <main class="container py-4">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../blog.html">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">P vs NP</li>
+      </ol>
+    </nav>
+
+    <!-- Title & Meta -->
+    <header class="mb-3">
+      <h1 class="display-5">P vs NP</h1>
+      <div class="post-meta text-muted d-flex align-items-center gap-3">
+        <span><i class="bi bi-calendar"></i> <time datetime="2025-09-28">September 28, 2025</time></span>
+        <span><i class="bi bi-clock"></i> ~3 min read</span>
+      </div>
+      <hr>
+    </header>
+
+    <!-- Optional hero -->
+    <!-- <img src="../assets/pvsnp.jpg" alt="Computer science graphic for P vs NP" class="post-hero mb-4"> -->
+
+    <!-- Article -->
+    <article class="fs-5">
+      <p class="dropcap">
+        Computer science stands on mathematics and logic; remove either and the foundation crumbles. We use computation to chase truths—some reachable quickly, others stubbornly complex. Problems solvable in time polynomial in the input size fall into the class <em>P</em>. Those whose solutions can be <em>verified</em> quickly—even if we don’t know how to <em>find</em> them quickly—sit in <em>NP</em>.
+      </p>
+      <p>
+        Our instinct is to want every problem solved, yet humility is part of rigor. There may be truths outside our current reach. The question <strong>P&nbsp;=?&nbsp;NP</strong> asks whether every efficiently verifiable solution can also be efficiently found. Declaring a verdict without the needed prerequisites is a philosophical, not mathematical, move.
+      </p>
+      <p>
+        A helpful picture: <em>NP</em> is like a Sudoku. Given a completed grid, checking it is fast—polynomial. But finding that grid may be hard. Before a solution appears, it feels “hidden,” not because it does not exist, but because our current tools cannot reveal it efficiently.
+      </p>
+      <p>
+        If a particular NP instance has a certificate we can verify quickly, that truth is accessible on the verification side even when discovery remains costly. Whether <em>all</em> of NP collapses to P is the crux—and assuming so globally would require a replacement of difficulty with efficiency without producing contradictions elsewhere.
+      </p>
+      <p>
+        In short, <strong>P might equal NP—or not</strong>. What matters here is disciplined openness: acknowledging limits while continuing the search. That posture keeps us logical, honest, and hopeful about what future insight may uncover.
+      </p>
+    </article>
+
+    <!-- Share / Next-Prev -->
+    <section class="mt-4">
+      <div class="card bg-dark text-light">
+        <div class="card-body d-flex flex-wrap justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-3">
+            <span class="small text-uppercase text-muted">Share</span>
+            <a class="text-light fs-5" target="_blank" rel="noopener"
+               href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/articles/article-02.html" aria-label="Share on Facebook">
+              <i class="bi bi-facebook"></i>
             </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-options">
-            
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
-                        <i class="bi bi-code-slash"></i> Code
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">
-                        <i class="bi bi-chat-dots"></i> Blog
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                        <i class="bi bi-person"></i> About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                        <i class="bi bi-envelope"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class='container'>
-            <h1 class='display-1 mt-4'> P vs NP </h1>
-            <hr>
-            <p class="tab">
-                Computer science is derived through math and logic, without one or the other the entire foundation of computer science is bound 
-                to crumble. Thankfully, our entire livelihood exists upon the foundation of truth. In order to discover more truth, we use 
-                computer science to compute many problems, some much more complex than others. A simple problem that takes approximately 
-                polynomial time will fall under the “P” category discussed in the essay “The status of the P vs NP problem”. 
-                The problems that are not so simple and require much more computational energy are NP problems, and these problems sometimes 
-                require more computational power than we actually have. So as computer scientists we want to be able to solve everything, 
-                however, as human beings we must understand that if we are to live in truth and to live within logic then we must accept that 
-                there is a realm of hidden knowledge. Although the realm of “The Hidden” is beyond the scope of this essay the concept that 
-                must be realized still applies; Even if the knowledge is not available to us at this moment, we must acknowledge its existence so 
-                as to remain logical in hopes of one day accepting the truth. P=NP vs P!=NP has requirements that must be met for us to determine 
-                its final boolean value, what rather is a more looming danger is the people that are very bound on one being true and the other 
-                being false, by accepting an answer that they lack the required prerequisite knowledge to answer. 
-            </p>
-            <p class="tab">
-                Maybe after a universal acceptance of that knowledge being outside of our reach, just as a curtain hides that which is in 
-                direct sight, that curtain may be revealed and that which is hidden will become known. The way we can look at NP is like a 
-                sudoku puzzle, there are many ways to check if it is correct, “verifiable”, however it takes a long time to solve it. 
-                This solution was within the Hidden realm before it was solved, not to say that it was in the future, because if it was not 
-                solved it would still remain in the Hidden and not in the future. This is to say that the NP,nondeterministic polynomial, 
-                problem set, does not have to be solved within our Time to be considered equal to P rather it must simply exist within truth. 
-                If the result of P is true and the result of NP is true then we must accept that P can in at least one form equal to NP. 
-                For us to expect that all of NP = P in every scenario is an odd request considering the very lengths this may reach, for 
-                example to check if 1 = one we must check every instance for 1 to ever exist and replace it with one; that replacement if 
-                we want 1=one to hold true must not create any falsehood and must only result in truth if that was the initial state. 
-                All in all, P might very well equal NP, we just do not have the necessary information required to answer that question.
-
-            </p>
+            <a class="text-light fs-5" target="_blank" rel="noopener"
+               href="https://twitter.com/intent/tweet?url=https://yourdomain.com/articles/article-02.html&text=P%20vs%20NP%20%E2%80%94%20Jamal%20Seder" aria-label="Share on X">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <a class="btn btn-outline-light btn-sm" href="../blog.html"><i class="bi bi-journal-text"></i> All Posts</a>
+            <a class="btn btn-success btn-sm" href="article-03.html"><i class="bi bi-arrow-right"></i> Next</a>
+          </div>
         </div>
-        <!--  Bootstrap Bundle with Popper -->
-        <script src="../scripts/bootstrap.bundle.min.js"></script>
-    </body>
+      </div>
+    </section>
 
+    <!-- Social row to match other pages -->
+    <section class="mt-4">
+      <div class="text-center">
+        <a href="https://www.instagram.com/hijamabyjamal/" target="_blank" class="text-dark me-3 fs-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61577323511539" target="_blank" class="text-dark fs-3"><i class="bi bi-facebook"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/bootstrap.bundle.min.js"></script>
+</body>
 </html>

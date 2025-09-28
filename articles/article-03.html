@@ -1,103 +1,145 @@
-<html>
-    <head>
-        <link rel="icon" href="../assets/JamalProfilePic.jpg">
-        <title>Jamal Seder</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/JamalProfilePic.jpg">
+  <title>Online Audit Scheduler — Jamal Seder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A constraint satisfaction approach to building an online audit scheduler with a clean frontend, robust backend, and AI-assisted scheduling.">
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/bootstrap-icons.css">
+  <link rel="stylesheet" href="../styles/updates.css">
+  <style>
+    .post-meta{font-size:.9rem;}
+    .team-card img{object-fit:cover; height:180px; width:100%;}
+  </style>
+</head>
+<body class="bg-white text-dark">
+  <!-- Navbar (relative links for /articles/) -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+    <a class="navbar-brand" href="../index.html"><i class="bi bi-house"></i> Jamal Seder</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-options">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../projects.html"><i class="bi bi-code-slash"></i> Code</a></li>
+        <li class="nav-item"><a class="nav-link" href="../teaching.html"><i class="bi bi-journal-bookmark"></i> Teaching</a></li>
+        <li class="nav-item"><a class="nav-link" href="../hijama.html"><i class="bi bi-heart"></i> Hijama</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../blog.html"><i class="bi bi-chat-dots"></i> Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../styles/bootstrap.min.css">
-        <link rel="stylesheet" href="../styles/bootstrap-icons.css">
-        <link rel="stylesheet" href="../styles/updates.css">
-    </head>
-    <body class="bg-dark text-light">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="index.html">
-            <i class="bi bi-house"></i> Jamal Seder
-            </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-options">
-            
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
-                        <i class="bi bi-code-slash"></i> Code
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">
-                        <i class="bi bi-chat-dots"></i> Blog
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                        <i class="bi bi-person"></i> About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                        <i class="bi bi-envelope"></i> Contact
-                        </a>
-                    </li>
-                </ul>
+  <main class="container py-4">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../blog.html">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Online Audit Scheduler</li>
+      </ol>
+    </nav>
+
+    <!-- Title & Meta -->
+    <header class="mb-3">
+      <h1 class="display-5">Online Audit Scheduler</h1>
+      <div class="post-meta text-muted d-flex align-items-center gap-3">
+        <span><i class="bi bi-calendar"></i> <time datetime="2025-09-28">September 28, 2025</time></span>
+        <span><i class="bi bi-clock"></i> ~3 min read</span>
+      </div>
+      <hr>
+    </header>
+
+    <!-- Article -->
+    <article class="fs-5">
+      <p>
+        To schedule an event responsibly, we must find a time that avoids conflicts with other events and present the result so users can quickly see what matters. This is a classic <strong>constraint satisfaction problem (CSP)</strong>. Our team set out to build a working prototype for scheduling audits at our university—simple enough for professors to use, yet smart enough to respect real-world constraints.
+      </p>
+      <p>
+        The system spans <em>frontend</em>, <em>backend</em>, and <em>AI</em> layers to deliver a full-stack experience: clean forms and calendars for users, reliable storage and APIs for data, and a scheduler that uses constraints to find feasible times.
+      </p>
+      <h2 class="h4 mt-4"><i class="bi bi-diagram-3"></i> Approach</h2>
+      <ul>
+        <li><strong>Model</strong>: Courses, rooms, instructors, and time slots with constraints (availability, capacity, precedence).</li>
+        <li><strong>Search</strong>: Backtracking with heuristics; forward checking to prune early.</li>
+        <li><strong>UX</strong>: Conflict hints inline; calendar views; one-click reschedule suggestions.</li>
+        <li><strong>Data</strong>: REST endpoints; normalized tables for audits, rooms, users, and assignments.</li>
+      </ul>
+    </article>
+
+    <!-- Team -->
+    <section class="mt-4">
+      <h2 class="h4 mb-3"><i class="bi bi-people"></i> Team</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card bg-dark text-light h-100 team-card">
+            <img src="../assets/JamalPhoto.jpg" alt="Photo of Jamal Seder">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Jamal Seder</h5>
+              <p class="small mb-0">
+                Computer Science — UNO. I strive to align work with purpose: encourage good, caution against harm, and be patient.
+              </p>
             </div>
-        </nav>
-        <div class='container'>
-            <h1 class='display-1 mt-4'> Online Audit Scheduler </h1>
-            <hr>
-            <p class="tab">
-                In order to schedule an event, we must discover the time we want to hold the event without obstructing on other events and at the same 
-                moment, displaying that event in a way where users can uncover the necessary information. Here we have a clear problem that must be solved; 
-                specifically a constraint satisfaction problem, CSP. My team will work together to develop a working prototype that can be applied to scheduling
-                audits within our University, able to be used by professors in a simple manner. This project will require the use of Front-end, Back-end, and 
-                Artificial Intelligence algorithms to construct a full-stack application. 
-            </p>
-            <p>
-                My team: <br>
-                <div class="row">
-                    <p>
-                        <div class="col-md-8 col-12">
-                            <strong>Jamal Seder: </strong>Salaam, My name is Jamal Seder and I am a Computer Science student at the University of New Orleans, 
-                            I strive towards good deeds, especially within the work that I do. I encourage righteous acts, caution against evil, 
-                            and I am a patient man. 
-                        </div>
-                        
-                        <div class='col-sm-4 d-sm-block d-none'>
-                            <img class='img-fluid img-smaller img-thumbnail' src='../assets/JamalPhoto.jpg' >
-                        </div>
-                    </p>
-                    
-                    <p>
-                        <div class="col-md-8 col-12">
-                            <strong>Hajrudin Satrovic:</strong> Hajrudin Satrovic - My name is Hajrudin and I am a CS student with a concentration in cybersecurity 
-                            and a math minor. My personal interests include being outdoors, traveling and trading in the stock market. <br>
-                        </div>
-                        <div class='col-sm-4 d-sm-block d-none'>
-                            <img class='img-fluid img-smaller img-thumbnail' src='../assets/hajro.jpg' >
-                        </div>
-                    </p>
-                    
-                    <p>
-                        <div class="col-md-8 col-12">
-                            <strong>Nooman Muhammad:</strong> My name is Nooman and I am a computer science student at the Univeristy of New Orleans. 
-                            My personal interests include traveling, photography, and cars.
-                        </div>
-                        <div class='col-sm-4 d-sm-block d-none'>
-                            <img class='img-fluid img-smaller img-thumbnail' src='../assets/nooman.jpg' >
-                        </div>
-                    </p>
-                    
-                    
-                </div>
-                
-            </p>
+          </div>
         </div>
-        <!--  Bootstrap Bundle with Popper -->
-        <script src="../scripts/bootstrap.bundle.min.js"></script>
-    </body>
+        <div class="col-md-4">
+          <div class="card bg-dark text-light h-100 team-card">
+            <img src="../assets/hajro.jpg" alt="Photo of Hajrudin Satrovic">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Hajrudin Satrovic</h5>
+              <p class="small mb-0">
+                CS (cybersecurity) + math minor. Enjoys the outdoors, travel, and stock trading.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark text-light h-100 team-card">
+            <img src="../assets/nooman.jpg" alt="Photo of Nooman Muhammad">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Nooman Muhammad</h5>
+              <p class="small mb-0">
+                CS — UNO. Interests include travel, photography, and cars.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Share / Next-Prev -->
+    <section class="mt-4">
+      <div class="card bg-dark text-light">
+        <div class="card-body d-flex flex-wrap justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-3">
+            <span class="small text-uppercase text-muted">Share</span>
+            <a class="text-light fs-5" target="_blank" rel="noopener"
+               href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/articles/article-03.html" aria-label="Share on Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a class="text-light fs-5" target="_blank" rel="noopener"
+               href="https://twitter.com/intent/tweet?url=https://yourdomain.com/articles/article-03.html&text=Online%20Audit%20Scheduler%20%E2%80%94%20Jamal%20Seder" aria-label="Share on X">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <a class="btn btn-outline-light btn-sm" href="../blog.html"><i class="bi bi-journal-text"></i> All Posts</a>
+            <a class="btn btn-success btn-sm" href="article-04.html"><i class="bi bi-arrow-right"></i> Next</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social row to match other pages -->
+    <section class="mt-4">
+      <div class="text-center">
+        <a href="https://www.instagram.com/hijamabyjamal/" target="_blank" class="text-dark me-3 fs-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61577323511539" target="_blank" class="text-dark fs-3"><i class="bi bi-facebook"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/bootstrap.bundle.min.js"></script>
+</body>
 </html>
